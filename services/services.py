@@ -7,8 +7,8 @@ import requests
 
 
 # functions
-def fetch_data(url: str):
-    res = requests.get(url)
+def fetch_data(url, params):
+    res = requests.get(url, params)
     if res.status_code != 200:
         print(f"Error!! Could not connect. Code: {res.status_code}")
         return None
